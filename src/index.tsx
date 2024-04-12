@@ -20,3 +20,25 @@ const Xprinter = NativeModules.Xprinter
 export function multiply(a: number, b: number): Promise<number> {
   return Xprinter.multiply(a, b);
 }
+
+
+export function discovery(connType: number): Promise<number> {
+  return Xprinter.discovery(connType);
+}
+
+export function connect(connType: number, address: string): Promise<number> {
+  return Xprinter.connect(connType, address);
+}
+
+export function printBitmap(base64: string){
+  return Xprinter.printBitmap(base64);
+}
+
+export function openCashBox(){
+  return Xprinter.openCashBox();
+}
+
+
+export function printerStatus(): Promise<number> {
+  return Xprinter.printerStatus();
+}
