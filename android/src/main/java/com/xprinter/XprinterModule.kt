@@ -24,6 +24,7 @@ import net.posprinter.POSConnect
 import net.posprinter.POSConst
 import net.posprinter.POSPrinter
 import net.posprinter.esc.PosUdpNet
+import java.net.InetAddress
 
 
 data class Bean(
@@ -127,6 +128,38 @@ class XprinterModule(reactContext: ReactApplicationContext) :
           promise.reject("STATUS", it.toString())
         }
       }
+    } catch (e: Exception) {
+      e.printStackTrace()
+      promise.reject("STATUS", e.message)
+    }
+  }
+
+
+  @ReactMethod
+  fun isConnect(promise: Promise) {
+    try {
+      val printer = POSPrinter(curConnect)
+      printer.isConnect {
+        if (it == 0){
+          promise.resolve(true)
+        } else {
+          promise.reject("STATUS", it.toString())
+        }
+      }
+    } catch (e: Exception) {
+      e.printStackTrace()
+      promise.reject("STATUS", e.message)
+    }
+  }
+
+
+  @ReactMethod
+  fun setIp(ipAddress: String, promise: Promise) {
+    try {
+      val printer = POSPrinter(curConnect)
+      val bytes = InetAddress.getByName(ipAddress).address
+      printer.setIp(bytes)
+      promise.resolve(true)
     } catch (e: Exception) {
       e.printStackTrace()
       promise.reject("STATUS", e.message)

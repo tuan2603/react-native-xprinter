@@ -40,3 +40,11 @@ export function openCashBox() {
 export function printerStatus(): Promise<number> {
   return Xprinter.printerStatus();
 }
+
+export function isConnect(): Promise<boolean> {
+  return Xprinter.isConnect();
+}
+
+export function setIp(ipAddress: String): Promise<boolean> {
+  return Xprinter.setIp(ipAddress);
+}
