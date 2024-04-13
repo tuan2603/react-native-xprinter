@@ -21,23 +21,21 @@ export function multiply(a: number, b: number): Promise<number> {
   return Xprinter.multiply(a, b);
 }
 
-
-export function discovery(connType: number): Promise<number> {
+export function discovery(connType: number): Promise<string> {
   return Xprinter.discovery(connType);
 }
 
-export function connect(connType: number, address: string): Promise<number> {
+export function connect(connType: number, address: string): Promise<boolean> {
   return Xprinter.connect(connType, address);
 }
 
-export function printBitmap(base64: string){
+export function printBitmap(base64: string) {
   return Xprinter.printBitmap(base64);
 }
 
-export function openCashBox(){
+export function openCashBox() {
   return Xprinter.openCashBox();
 }
-
 
 export function printerStatus(): Promise<number> {
   return Xprinter.printerStatus();
