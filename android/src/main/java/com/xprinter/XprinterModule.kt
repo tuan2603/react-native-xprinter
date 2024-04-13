@@ -10,10 +10,10 @@ import android.os.Build
 import android.util.Log
 import androidx.core.content.ContextCompat
 import com.facebook.react.bridge.Arguments
+import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
 import com.xprinter.utils.ImageUtils
 import com.xprinter.utils.MapUtil
 import kotlinx.coroutines.delay
@@ -122,7 +122,7 @@ class XprinterModule(reactContext: ReactApplicationContext) :
     try {
       val printer = POSPrinter(curConnect)
       printer.printerStatus {
-        if (it > 0){
+        if (it > 0) {
           promise.resolve(true)
         } else {
           promise.reject("STATUS", it.toString())
@@ -140,7 +140,7 @@ class XprinterModule(reactContext: ReactApplicationContext) :
     try {
       val printer = POSPrinter(curConnect)
       printer.isConnect {
-        if (it == 0){
+        if (it == 0) {
           promise.resolve(true)
         } else {
           promise.reject("STATUS", it.toString())
@@ -168,11 +168,17 @@ class XprinterModule(reactContext: ReactApplicationContext) :
 
 
   private fun searchUsb(promise: Promise) {
-    val usbNames = POSConnect.getUsbDevices(reactApplicationContext)
-    if (usbNames.isNotEmpty()) {
-      promise.resolve(usbNames)
-    } else {
-      promise.reject("SCAN_ERROR", "not found")
+    try {
+      val usbNames = POSConnect.getUsbDevices(reactApplicationContext)
+      if (usbNames.isNotEmpty()) {
+        val firstItem: String? = usbNames.firstOrNull()
+        promise.resolve(firstItem)
+      } else {
+        promise.reject("SCAN_ERROR", "not found")
+      }
+    } catch (e: Exception) {
+      e.printStackTrace()
+      promise.reject("STATUS", e.message)
     }
   }
 
