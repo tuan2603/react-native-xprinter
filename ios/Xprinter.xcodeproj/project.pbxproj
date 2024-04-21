@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* Xprinter.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Xprinter.mm */; };
-		F4FF95D7245B92E800C19C63 /*  Xprinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  Xprinter.swift */; };
+		6CDAB8D22BD58796002BCC0F /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */; };
+		F4FF95D7245B92E800C19C63 /* Xprinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Xprinter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +25,15 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libXprinter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXprinter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDAB8782BD57BC0002BCC0F /* POSCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSCommand.h; sourceTree = "<group>"; };
+		6CDAB8792BD57BC0002BCC0F /* POSImageTranster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSImageTranster.h; sourceTree = "<group>"; };
+		6CDAB87A2BD57BC0002BCC0F /* POSPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinter.h; sourceTree = "<group>"; };
+		6CDAB87B2BD57BC0002BCC0F /* POSPrinterSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinterSDK.h; sourceTree = "<group>"; };
+		6CDAB87C2BD57BC0002BCC0F /* POSWIFIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSWIFIManager.h; sourceTree = "<group>"; };
+		6CDAB87D2BD57BC0002BCC0F /* PrinterProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterProfile.h; sourceTree = "<group>"; };
+		6CDAB87E2BD57BC0002BCC0F /* WIFIConnecter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFIConnecter.h; sourceTree = "<group>"; };
+		6CDAB8972BD58361002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPrinterSDK.a; sourceTree = "<group>"; };
+		6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPrinterSDK.a; path = PrinterSDK/libPrinterSDK.a; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Xprinter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xprinter.mm; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Xprinter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Xprinter-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Xprinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xprinter.swift; sourceTree = "<group>"; };
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CDAB8D22BD58796002BCC0F /* libPrinterSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +62,44 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				6CDAB8812BD57BC0002BCC0F /* PrinterSDK */,
 				F4FF95D6245B92E800C19C63 /* Xprinter.swift */,
 				B3E7B5891CC2AC0600A0062D /* Xprinter.mm */,
 				F4FF95D5245B92E700C19C63 /* Xprinter-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				6CDAB8CF2BD5877E002BCC0F /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		6CDAB87F2BD57BC0002BCC0F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6CDAB8782BD57BC0002BCC0F /* POSCommand.h */,
+				6CDAB8792BD57BC0002BCC0F /* POSImageTranster.h */,
+				6CDAB87A2BD57BC0002BCC0F /* POSPrinter.h */,
+				6CDAB87B2BD57BC0002BCC0F /* POSPrinterSDK.h */,
+				6CDAB87C2BD57BC0002BCC0F /* POSWIFIManager.h */,
+				6CDAB87D2BD57BC0002BCC0F /* PrinterProfile.h */,
+				6CDAB87E2BD57BC0002BCC0F /* WIFIConnecter.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		6CDAB8812BD57BC0002BCC0F /* PrinterSDK */ = {
+			isa = PBXGroup;
+			children = (
+				6CDAB8972BD58361002BCC0F /* libPrinterSDK.a */,
+				6CDAB87F2BD57BC0002BCC0F /* Headers */,
+			);
+			path = PrinterSDK;
+			sourceTree = "<group>";
+		};
+		6CDAB8CF2BD5877E002BCC0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* Xprinter.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* Xprinter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -212,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -228,7 +270,10 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PrinterSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Xprinter;
 				SKIP_INSTALL = YES;
@@ -247,7 +292,10 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PrinterSDK",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Xprinter;
 				SKIP_INSTALL = YES;
