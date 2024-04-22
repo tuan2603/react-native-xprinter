@@ -1,9 +1,7 @@
-
-
 @objc(Xprinter)
 class Xprinter: NSObject, POSWIFIManagerDelegate {
     
-  let manager = POSWIFIManager.sharedInstance()
+    let manager = POSWIFIManager.sharedInstance()
     
  var connectResolve: RCTPromiseResolveBlock?
  var connectReject: RCTPromiseRejectBlock?

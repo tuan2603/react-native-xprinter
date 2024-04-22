@@ -42,6 +42,10 @@
 		5B7EB9410499542E8C5724F5 /* Pods-XprinterExample-XprinterExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XprinterExample-XprinterExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-XprinterExample-XprinterExampleTests/Pods-XprinterExample-XprinterExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-XprinterExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XprinterExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CDAB88C2BD57EFF002BCC0F /* libreact-native-xprinter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-xprinter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDAB9082BD6A9C0002BCC0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6CDAB90A2BD6A9D7002BCC0F /* libreact-native-xprinter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-xprinter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDAB90C2BD6AA08002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPrinterSDK.a; path = ../../ios/PrinterSDK/libPrinterSDK.a; sourceTree = "<group>"; };
+		6CDAB9422BD6C1FD002BCC0F /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = XprinterExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-XprinterExample-XprinterExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XprinterExample-XprinterExampleTests.release.xcconfig"; path = "Target Support Files/Pods-XprinterExample-XprinterExampleTests/Pods-XprinterExample-XprinterExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -100,6 +104,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CDAB9422BD6C1FD002BCC0F /* CoreAudioTypes.framework */,
+				6CDAB90C2BD6AA08002BCC0F /* libPrinterSDK.a */,
+				6CDAB90A2BD6A9D7002BCC0F /* libreact-native-xprinter.a */,
+				6CDAB9082BD6A9C0002BCC0F /* UIKit.framework */,
 				6CDAB88C2BD57EFF002BCC0F /* libreact-native-xprinter.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-XprinterExample.a */,
@@ -590,10 +598,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -661,10 +666,7 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

@@ -7,6 +7,7 @@
 #import "POSImageTranster.h"
 #import <UIKit/UIKit.h>
 
+
 typedef NS_ENUM(NSInteger, TextWidthRatio) {
     TXT_DEFAULTWIDTH = 0, // 默认
     TXT_1WIDTH = 1,       // 将宽度比设置为 x1

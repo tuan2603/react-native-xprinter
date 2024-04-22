@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <CoreBluetooth/CoreBluetooth.h>
 
 typedef NS_ENUM(NSInteger, POSPrinterConnectType) {
     POSPrinterConnectBLE = 0,           //Bluetooth

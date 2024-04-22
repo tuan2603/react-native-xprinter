@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CDAB8D22BD58796002BCC0F /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */; };
+		6CDAB90F2BD6AB38002BCC0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDAB90E2BD6AB38002BCC0F /* UIKit.framework */; };
+		6CDAB9152BD6B016002BCC0F /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDAB9142BD6B016002BCC0F /* libPrinterSDK.a */; };
+		6CDAB9412BD6C1B0002BCC0F /* CoreAudioTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDAB9402BD6C1B0002BCC0F /* CoreAudioTypes.framework */; platformFilter = ios; };
 		F4FF95D7245B92E800C19C63 /* Xprinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Xprinter.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,15 +27,16 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libXprinter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXprinter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CDAB8782BD57BC0002BCC0F /* POSCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSCommand.h; sourceTree = "<group>"; };
-		6CDAB8792BD57BC0002BCC0F /* POSImageTranster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSImageTranster.h; sourceTree = "<group>"; };
-		6CDAB87A2BD57BC0002BCC0F /* POSPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinter.h; sourceTree = "<group>"; };
-		6CDAB87B2BD57BC0002BCC0F /* POSPrinterSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinterSDK.h; sourceTree = "<group>"; };
-		6CDAB87C2BD57BC0002BCC0F /* POSWIFIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSWIFIManager.h; sourceTree = "<group>"; };
-		6CDAB87D2BD57BC0002BCC0F /* PrinterProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterProfile.h; sourceTree = "<group>"; };
-		6CDAB87E2BD57BC0002BCC0F /* WIFIConnecter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFIConnecter.h; sourceTree = "<group>"; };
-		6CDAB8972BD58361002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPrinterSDK.a; sourceTree = "<group>"; };
-		6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPrinterSDK.a; path = PrinterSDK/libPrinterSDK.a; sourceTree = "<group>"; };
+		6CDAB90E2BD6AB38002BCC0F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6CDAB9142BD6B016002BCC0F /* libPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPrinterSDK.a; sourceTree = "<group>"; };
+		6CDAB9352BD6BBD6002BCC0F /* POSCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSCommand.h; sourceTree = "<group>"; };
+		6CDAB9362BD6BBD6002BCC0F /* POSImageTranster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSImageTranster.h; sourceTree = "<group>"; };
+		6CDAB9372BD6BBD6002BCC0F /* POSPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinter.h; sourceTree = "<group>"; };
+		6CDAB9382BD6BBD6002BCC0F /* POSPrinterSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSPrinterSDK.h; sourceTree = "<group>"; };
+		6CDAB9392BD6BBD6002BCC0F /* POSWIFIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSWIFIManager.h; sourceTree = "<group>"; };
+		6CDAB93A2BD6BBD6002BCC0F /* PrinterProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterProfile.h; sourceTree = "<group>"; };
+		6CDAB93B2BD6BBD6002BCC0F /* WIFIConnecter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFIConnecter.h; sourceTree = "<group>"; };
+		6CDAB9402BD6C1B0002BCC0F /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
 		B3E7B5891CC2AC0600A0062D /* Xprinter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xprinter.mm; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Xprinter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Xprinter-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Xprinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xprinter.swift; sourceTree = "<group>"; };
@@ -44,7 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CDAB8D22BD58796002BCC0F /* libPrinterSDK.a in Frameworks */,
+				6CDAB9412BD6C1B0002BCC0F /* CoreAudioTypes.framework in Frameworks */,
+				6CDAB90F2BD6AB38002BCC0F /* UIKit.framework in Frameworks */,
+				6CDAB9152BD6B016002BCC0F /* libPrinterSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,44 +67,45 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				6CDAB8812BD57BC0002BCC0F /* PrinterSDK */,
+				6CDAB93E2BD6BBD6002BCC0F /* PrinterSDK */,
 				F4FF95D6245B92E800C19C63 /* Xprinter.swift */,
 				B3E7B5891CC2AC0600A0062D /* Xprinter.mm */,
 				F4FF95D5245B92E700C19C63 /* Xprinter-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
-				6CDAB8CF2BD5877E002BCC0F /* Frameworks */,
+				6CDAB8F42BD69E27002BCC0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6CDAB87F2BD57BC0002BCC0F /* Headers */ = {
+		6CDAB8F42BD69E27002BCC0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6CDAB8782BD57BC0002BCC0F /* POSCommand.h */,
-				6CDAB8792BD57BC0002BCC0F /* POSImageTranster.h */,
-				6CDAB87A2BD57BC0002BCC0F /* POSPrinter.h */,
-				6CDAB87B2BD57BC0002BCC0F /* POSPrinterSDK.h */,
-				6CDAB87C2BD57BC0002BCC0F /* POSWIFIManager.h */,
-				6CDAB87D2BD57BC0002BCC0F /* PrinterProfile.h */,
-				6CDAB87E2BD57BC0002BCC0F /* WIFIConnecter.h */,
+				6CDAB9402BD6C1B0002BCC0F /* CoreAudioTypes.framework */,
+				6CDAB9142BD6B016002BCC0F /* libPrinterSDK.a */,
+				6CDAB90E2BD6AB38002BCC0F /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CDAB93C2BD6BBD6002BCC0F /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				6CDAB9352BD6BBD6002BCC0F /* POSCommand.h */,
+				6CDAB9362BD6BBD6002BCC0F /* POSImageTranster.h */,
+				6CDAB9372BD6BBD6002BCC0F /* POSPrinter.h */,
+				6CDAB9382BD6BBD6002BCC0F /* POSPrinterSDK.h */,
+				6CDAB9392BD6BBD6002BCC0F /* POSWIFIManager.h */,
+				6CDAB93A2BD6BBD6002BCC0F /* PrinterProfile.h */,
+				6CDAB93B2BD6BBD6002BCC0F /* WIFIConnecter.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		6CDAB8812BD57BC0002BCC0F /* PrinterSDK */ = {
+		6CDAB93E2BD6BBD6002BCC0F /* PrinterSDK */ = {
 			isa = PBXGroup;
 			children = (
-				6CDAB8972BD58361002BCC0F /* libPrinterSDK.a */,
-				6CDAB87F2BD57BC0002BCC0F /* Headers */,
+				6CDAB93C2BD6BBD6002BCC0F /* Headers */,
 			);
 			path = PrinterSDK;
-			sourceTree = "<group>";
-		};
-		6CDAB8CF2BD5877E002BCC0F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6CDAB8D12BD58796002BCC0F /* libPrinterSDK.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +270,7 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -273,6 +280,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PrinterSDK",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Xprinter;
@@ -286,6 +294,7 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -295,6 +304,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PrinterSDK",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Xprinter;
